@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Inter&family=Poppins&family=Rancho&display=swap" rel="stylesheet">
+    
+    <title>Document</title>
+</head>
+<body>
+    <header id="navbar">
+        <nav class="container-md flex" >
+            <ul>
+                <li><a class="font-title fs-4 italic" href="#home">Rangkep.io</a></li>
+            </ul>
+            <ul class="flex container-sm">
+                <li><a href="#product">Products <i class="fa fa-angle-down fa-2xs" aria-hidden="true"></i></a></li>
+                <li><a href="">Solution <i class="fa fa-angle-down fa-2xs" aria-hidden="true"></i></a></li>
+                <li><a href="">Company <i class="fa fa-angle-down fa-2xs" aria-hidden="true"></i></a></li>
+            </ul>
+            <ul>
+                <li class="flex">
+                    <a class="btn-tr f-bold" id="none">Daftar</a> 
+                    <a class="btn-tr d-none" id="btn-toggle">
+                        <i class="fa fa-bars rotate"></i>
+                    </a>
+                </li>
+            </ul> 
+        </nav>
+        <div class="nav-toggle container-md d-none absolute" id="nav-toggle">
+            <ul class="block fs-2">
+                <a href="" class="" id="btn-toggle"><li>Products<i class="fa fa-angle-down fa-2xs rotate" aria-hidden="true"></i></li></a>
+                <a href=""><li>Solution<i class="fa fa-angle-down fa-2xs" aria-hidden="true"></i></li></a>
+                <a href=""><li>Company<i class="fa fa-angle-down fa-2xs" aria-hidden="true"></i></li></a>
+                
+            </ul>
+            <button class="btn-tr-full">Daftar</button>
+        </div>
+    </header>
+
+    <div class="container-md" id="content">
+        <div class="content">
+            <div class="col">
+                <h1 class="fs-4">Rancangan Keperluan Bagi Anda yang Membutuhkan </h1>
+                <p class="fs-l">Layanan kamu akan memudahkan Anda untuk semua keperluan. Mulai dari event organizer, wedding event, dan lainnya. Tersedia banyak fitur loh. Silahkan coba sekarang!</p>
+
+                <button class="btn-blue">Coba Sekarang</button>
+            </div>
+            <div class="col">
+                <img src="assets/img/wedding-dashboard.png" alt="Wedding Day" width="90%">
+            </div>
+        </div>
+
+        <div class="content">
+
+        </div>
+    </div>
+
+    <section class="container-md">
+        asd
+    </section>
+
+    <script src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+    $('#btn-toggle').click(function(){
+        $(this).find('.rotate').toggleClass('down')
+        $("div#nav-toggle").toggle('show')
+    });
+    </script>
+</body>
+</html>
