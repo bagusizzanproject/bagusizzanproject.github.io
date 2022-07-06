@@ -28,11 +28,21 @@ window.onscroll = function(){
 // }
 
 
-function display(x) {
+function myFunction(x) {
     if (x.matches) { // If media query matches
-      document.getElementById('nav-toggle').style.display = 'none'
+      document.getElementById('nav-toggle').style.display = "none"
+      document.getElementById('rotate').style.transition = "all .8s"
+      document.getElementById('rotate').style.transform = "unset"
+    //   document.getElementById('btn-toggle').style.backgroundColor = 'unset'
+    //   document.getElementById('rotate').style.backgroundColor = '#000'
+      console.log("true")
+    }else{
+        document.getElementById('rotate').style.transition = "all .8s"
+        document.getElementById('rotate').style.transform = "translate(90deg)"
+        // console.log("else")
     }
   }
   
   var x = window.matchMedia("(min-width: 769px)")
-  display(x) 
+  myFunction(x)
+  x.addListener(myFunction)
