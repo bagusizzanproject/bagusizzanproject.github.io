@@ -31,7 +31,7 @@ ul li{list-style: none;}
     border-radius: 10px;font-size: 15px;padding: 1em .8em;border: none;
 }
 .btn-tr:hover{background-color: #0D6EFD; transition: linear .3s; color: white;}
-.btn-tr-full:hover{background: linear-gradient(to right, rgb(255, 247, 247),rgb(231, 232, 252)); font-weight: bolder;}
+.btn-tr-full:hover{background: linear-gradient(to right, rgb(255, 247, 247),rgb(231, 232, 252)); font-weight: bolder;cursor: pointer;}
 .btn-blue:hover{background-color: #0447ac;transition: linear .3s;}
 .f-bold{font-weight: bold;}
 .font-title{font-family: 'Rancho';font-size: 30px;}
@@ -61,25 +61,59 @@ ul li a{text-decoration: none; color: black;text-align: center;align-items: cent
 .down{transform:rotate(90deg);}
 .absolute{position: absolute;top:70px;right: 0;}
 
+section {
+    position: relative;
+    overflow: hidden; margin-top: 7em;
+}
+
+section .img-list{
+    height: 150px;
+    animation: animate 10s linear infinite;
+    display: flex;
+    align-items: center;
+    width: calc(400px*8);
+}
+
+section .img img{
+    width: 250px;margin-right: 150px;transition: transform .5s;filter: grayscale(100%);
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(0)
+    }
+    100% {
+        transform: translateX(calc(-400px*4))
+    }
+}
+
+.img-list:hover{
+    animation-play-state: paused;
+}
+
+.img-list img:hover{
+    filter: unset;
+    transform: scale(1.2);
+}
+
 @media screen and (min-width:901px){
     .container-md{width: 70%;}
 }
 
-@media screen and (max-width:1200px){
-    .container-md{width: 100%;}
-}
-
-@media screen and (min-width:1366px){
+@media screen and (min-width:1200px){
     .container-md{width: 95%;}
 }
 
+@media screen and (min-width:1367px){
+    .container-md{width: 70%;}
+}
 
 
 @media screen and (max-width:768px) {
     .col img{width: 60%;}
     .content{flex-wrap: wrap-reverse;text-align: center;} .content .fs-4{font-size: 25px;}
-    
-    .nav-toggle .btn-blue{width: 100%;}
+    .nav-toggle{width: 100%; margin: auto; }
+    .nav-toggle .btn-tr-full{width: 100%;}
     nav ul:nth-child(2), ul:nth-child(3) #none{display: none;}
     .btn-tr{display: block;}
     .btn-tr:hover{color: white;}
